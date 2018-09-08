@@ -1,0 +1,18 @@
+```
+sudo nano /etc/network/interfaces
+```
+
+```
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+allow-hotplug wlan0
+auto wlan0
+
+
+iface wlan0 inet dhcp
+        wpa-ssid "ssid"
+        wpa-psk "password"
+```
